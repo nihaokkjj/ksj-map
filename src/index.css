@@ -1,10 +1,6 @@
 :root {
   color-scheme: light;
-  font-family:
-    'Segoe UI Variable Display',
-    'PingFang SC',
-    'Microsoft YaHei',
-    sans-serif;
+  font-family: 'Segoe UI Variable Text', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -12,11 +8,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --paper: #f4efe4;
-  --paper-strong: #fffaf1;
-  --ink: #1f2933;
-  --ink-soft: #52606d;
-  --teal: #12615d;
+  --bg: #f6efe4;
+  --bg-deep: #eadfcf;
+  --ink: #1a2430;
+  --muted: #5f6874;
+  --line: rgba(26, 36, 48, 0.1);
+  --surface: rgba(255, 250, 244, 0.84);
+  --brand: #11706f;
+  --brand-deep: #0c4d57;
+  --accent: #e87b47;
+  --shadow-soft: 0 24px 60px rgba(26, 36, 48, 0.09);
 }
 
 * {
@@ -33,16 +34,35 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(255, 197, 61, 0.24), transparent 26%),
-    radial-gradient(circle at top right, rgba(18, 97, 93, 0.18), transparent 24%),
-    linear-gradient(180deg, #f7f1e5 0%, #efe7d8 100%);
+    radial-gradient(circle at 12% 14%, rgba(232, 123, 71, 0.18), transparent 24%),
+    radial-gradient(circle at 84% 12%, rgba(17, 112, 111, 0.2), transparent 22%),
+    radial-gradient(circle at 56% 90%, rgba(132, 146, 163, 0.16), transparent 24%),
+    linear-gradient(180deg, var(--bg) 0%, #f2e7d8 48%, var(--bg-deep) 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 120px 120px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 90%);
 }
 
 button,
-input {
+input,
+textarea,
+select {
   font: inherit;
 }
 
-a {
+button {
   color: inherit;
+}
+
+::selection {
+  background: rgba(17, 112, 111, 0.18);
 }

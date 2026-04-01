@@ -1,0 +1,29 @@
+{
+  "fetchedAt": "2026-04-01 10:00",
+  "modules": [
+    {
+      "id": "route-layout",
+      "title": "把 AppShell 和 Outlet 串起来",
+      "category": "路由",
+      "minutes": 25,
+      "description": "理解布局组件为什么适合承接导航、品牌和页面出口。",
+      "focus": ["AppShell", "Outlet", "NavLink"]
+    },
+    {
+      "id": "request-flow",
+      "title": "给 fetch 请求补全三态处理",
+      "category": "接口请求",
+      "minutes": 30,
+      "description": "请求不是拿到数据就结束，真正的重点是 loading、success 和 error 的界面联动。",
+      "focus": ["fetch", "loading", "retry"]
+    },
+    {
+      "id": "reducer-import",
+      "title": "把接口返回数据导入 reducer",
+      "category": "状态管理",
+      "minutes": 35,
+      "description": "练习如何通过 action 把远程数据合并进本地任务数组。",
+      "focus": ["dispatch", "action", "state merge"]
+    }
+  ]
+}
